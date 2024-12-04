@@ -1,98 +1,54 @@
-Hushbox
-Hushbox 是一款简洁高效的本地密码管理工具，专为加密货币玩家和注重隐私的用户设计。该软件具备强大的 AES-256 加密能力，所有数据均以加密形式存储在本地，确保您的账户信息安全。
+# Hushbox
 
-一.功能特性
-核心功能
-1.主密码保护：
-用户首次运行时设置主密码，所有数据均受主密码加密保护。
-可通过“Set Master Password”功能随时更新主密码。
-2.数据本地加密存储：
-使用强大的 AES-256 加密算法，所有数据均存储在本地的 encrypted_data.json 文件中。
-3.账户管理：
-支持添加账户信息（AccountName、Password、Notes）。
-表格中支持直接编辑账户名和备注，密码列默认隐藏，支持一键显示或隐藏。
-4.实时编辑与保存：
-支持双击表格直接修改账户信息。
-点击 “Save Changes” 按钮保存所有更改至本地文件。
+[English](#english-version) | [中文](#中文版本)
 
-二.安装与运行
+---
 
-系统要求
-操作系统：Windows 10 或更高版本。
-依赖：不需要安装 Python 或其他库（.exe 已打包为独立文件）。
+## English Version
 
-安装步骤
-下载 Hushbox：
-获取打包好的 Hushbox.exe 文件。
+Hushbox is a secure, lightweight, and easy-to-use local password manager designed for cryptocurrency users.
 
-运行程序：
-双击运行 Hushbox.exe，无需任何安装过程。
+---
 
-首次运行：
-如果主密码未设置，程序将引导您设置主密码。
+### Features
 
-三.使用方法
-首次运行
-1.启动程序后，若未设置主密码，会弹出提示，要求设置主密码。
-2.按提示输入新密码并确认，完成主密码设置。
+- **Local Encryption:** All data is securely encrypted and stored locally.
+- **Master Password:** Protect your accounts with a master password.
+- **Account Management:** Add, view, and edit account details like AccountName, Password, and Notes.
+- **Customizable Security:** Change master passwords anytime.
+- **User-Friendly Interface:** A simple GUI for all levels of users.
 
-解锁数据
-1.输入您的主密码后，点击 Unlock 按钮，进入主界面。
-2.若密码正确，您将看到保存的账户信息。
+---
 
-添加新账户
-1.点击 Add Account 按钮。
-2.输入以下信息：
-AccountName: 账户名称（如“OKX 钱包”）。
-Password: 账户密码。
-Notes: 备注信息（如“我的交易账户”）。
-3.点击 OK 保存。
+### How to Use
 
-四.编辑账户信息
-双击编辑：
-直接双击表格中的 AccountName 或 Notes 进行编辑。
-显示/隐藏密码：
-点击密码列的 👁 按钮切换密码显示状态，显示后可直接编辑密码。
+1. **Set Master Password:**
+   - Launch the application.
+   - Set your initial master password when prompted.
 
-五.保存更改
-修改完成后，点击 Save Changes 按钮。
-所有更改将加密存储到本地文件。
+2. **Unlock Application:**
+   - Enter your master password to access saved accounts.
 
-六.文件说明
-master_password.bin：
-存储加密后的主密码，无法直接读取。
-salt.bin：
-随机生成的加密盐值，用于密码加密，自动生成。
-encrypted_data.json：
-加密存储的账户数据，无法直接读取。
+3. **Manage Accounts:**
+   - Add accounts by clicking the "Add Account" button.
+   - Edit existing accounts directly in the table.
 
+4. **Save Changes:**
+   - Click the "Save Changes" button to save all updates.
 
-注意事项
-忘记主密码：
-如果忘记主密码，无法解密已存储的数据。建议妥善保存主密码。
-首次运行建议：
-若需要重新开始，您可以手动删除 master_password.bin 和 encrypted_data.json，软件会引导您重新设置主密码。
-数据隐私：
-所有数据均加密存储在本地，程序不会上传任何数据至网络。
-杀毒软件兼容：
-某些杀毒软件可能误报，请将程序加入信任列表。
-版本信息
-当前版本
-版本号: 1.0.0
-发布日期: 2024-12-04
-常见问题
-无法解锁，显示“Decryption failed”错误：
-请检查输入的主密码是否正确。如果问题仍然存在，您可能需要删除 master_password.bin 和 encrypted_data.json，重新开始。
-程序无法运行：
-确保下载的 Hushbox.exe 文件完整。
-检查系统是否为 Windows 10 或更高版本。
-密码显示不正确或文件损坏：
-如果 salt.bin 或其他文件被修改或删除，可能导致数据解密失败。建议重新初始化。
-未来计划
-增加云端同步功能（可选）。
-添加密码生成器。
-提供 Linux 和 macOS 版本支持。
-版权与许可
-作者: 高洋
-许可: 仅限个人使用，禁止未经授权的商业用途。
-如果需要进一步帮助或反馈问题，请联系作者
+---
+
+### Installation
+
+```bash
+# English
+git clone https://github.com/takahashigy/Hushbox.git
+cd Hushbox
+pip install -r requirements.txt
+python main.py
+
+# 中文
+git clone https://github.com/takahashigy/Hushbox.git
+cd Hushbox
+pip install -r requirements.txt
+python main.py
