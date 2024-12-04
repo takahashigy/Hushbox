@@ -113,5 +113,46 @@ git clone https://github.com/takahashigy/Hushbox.git
 cd Hushbox
 pip install -r requirements.txt
 python main.py
+```
+---
+**文件说明**
+-master_password.bin：
+ 存储加密后的主密码，无法直接读取。
+-salt.bin：
+ 随机生成的加密盐值，用于密码加密，自动生成。
+-encrypted_data.json：
+ 加密存储的账户数据，无法直接读取。
+**注意事项**
+-忘记主密码：
+ 如果忘记主密码，无法解密已存储的数据。建议妥善保存主密码。
+ -首次运行建议：
+ 若需要重新开始，您可以手动删除 master_password.bin 和 encrypted_data.json，软件会引导您重新设置主密码。
+**数据隐私**：
+-所有数据均加密存储在本地，程序不会上传任何数据至网络。
+-杀毒软件兼容：
+ 某些杀毒软件可能误报，请将程序加入信任列表。
+
+**版本信息**
+当前版本
+版本号: 1.0.0
+发布日期: 2024-12-04
+
+**常见问题**
+-无法解锁，显示“Decryption failed”错误：
+请检查输入的主密码是否正确。如果问题仍然存在，您可能需要删除 master_password.bin 和 encrypted_data.json，重新开始。
+-程序无法运行：
+确保下载的 Hushbox.exe 文件完整。
+-检查系统是否为 Windows 10 或更高版本。
+-密码显示不正确或文件损坏：
+ 如果 salt.bin 或其他文件被修改或删除，可能导致数据解密失败。建议重新初始化。
+
+**未来计划**
+-增加云端同步功能（可选）。
+-添加密码生成器。
+-提供 Linux 和 macOS 版本支持。
+
+**版权与许可**
+作者: 高洋
+许可: 仅限个人使用，禁止未经授权的商业用途。
 
 
