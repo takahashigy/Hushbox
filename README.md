@@ -41,13 +41,14 @@ Hushbox is a secure, lightweight, and easy-to-use local password manager designe
 ### Installation
 
 ```bash
-# English
 git clone https://github.com/takahashigy/Hushbox.git
 cd Hushbox
 pip install -r requirements.txt
 python main.py
 
-## 中文版本
+
+
+#中文版本
 
 Hushbox 是一款轻量级、安全且易用的本地密码管理器，专为加密货币用户设计。
 
