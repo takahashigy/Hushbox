@@ -44,15 +44,7 @@ Hushbox is a secure, lightweight, and easy-to-use local password manager designe
 git clone https://github.com/takahashigy/Hushbox.git
 cd Hushbox
 pip install -r requirements.txt
-python main.py
-
-
-
-
-
-
-
-
+python main.py ``` 
 
 
 
