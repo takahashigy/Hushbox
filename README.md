@@ -46,7 +46,7 @@ cd Hushbox
 pip install -r requirements.txt
 python main.py
 
-```markdown
+```
 ---
 
 ## 中文版本
