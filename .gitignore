@@ -1,0 +1,14 @@
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore environment folders
+venv/
+
+# Ignore local encrypted files
+encrypted_data.json
+master_password.bin
+salt.bin
+
+# Ignore executable files
+*.exe
